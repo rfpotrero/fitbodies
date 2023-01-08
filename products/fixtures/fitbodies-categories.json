@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "memberships",
+            "friendly_name": "Memberships"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "mealplans",
+            "friendly_name": "Meal Plans"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "ptsessions",
+            "friendly_name": "Personal Trainer"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "workouprogram",
+            "friendly_name": "Programs"
+        }
+    }
+]
