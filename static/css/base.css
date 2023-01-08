@@ -79,6 +79,10 @@ body {
 	z-index: -1;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
