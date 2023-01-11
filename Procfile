@@ -1,1 +1,1 @@
-web: gunicorn fitbodies.wsig:application
+web: gunicorn fitbodies.wsgi
