@@ -33,7 +33,12 @@
                 </form>
             </div>
             <div class="col-12 col-lg-6">
-                
+            {% if user_progress.weight_goal %}
+                <p>Your goal weight is, you are {{ kilos_to_go}} kilos away! Keep going! </p>
+            {% else %}
+                <p>You don't have a goal! Set your goal in the left side and start reaching your potential!</p>
+            {% endif%}
+            
             </div>
         </div>
 {% endblock %}

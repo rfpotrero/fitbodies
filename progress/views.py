@@ -21,6 +21,7 @@ def view_progress(request):
                 user_progress.chest = form.cleaned_data['chest']
                 user_progress.waist = form.cleaned_data['waist']
                 user_progress.save()  # Update the exisitng info.
+                kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
                 messages.success(request, 'Profile updated successfully')
             except UserProgress.DoesNotExist:
                 # create a new UserProgress object if none exists
@@ -31,11 +32,14 @@ def view_progress(request):
                 chest=form.cleaned_data['chest'],
                 waist=form.cleaned_data['waist'])
                 user_progress.save()
+                kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
                 messages.success(request, 'Profile updated successfully')
 
             template = 'progress/progress.html'
             context = {
                 'form': form,
+                'user_progress': user_progress,
+                'kilos_to_go': kilos_to_go
             }
 
             return render(request, template, context)
@@ -46,10 +50,10 @@ def view_progress(request):
     except UserProgress.DoesNotExist:
         #if request method is GET AND no UserProgress display the empty form
         form = UserProgressForm()
-   
     context = {
         'form': form,
         'user_progress': user_progress,
+        'kilos_to_go': kilos_to_go
     }
     template = 'progress/progress.html'
     return render(request, template, context)
