@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from .models import UserProgress
+from django.contrib import messages
 
+from .models import UserProgress
 from .forms import UserProgressForm
 
 
 def view_progress(request):
-
+    form = UserProgressForm()
 
     if request.method == 'POST':
         form = UserProgressForm(request.POST)
@@ -19,7 +20,8 @@ def view_progress(request):
                 user_progress.weight_goal = form.cleaned_data['weight_goal']
                 user_progress.chest = form.cleaned_data['chest']
                 user_progress.waist = form.cleaned_data['waist']
-                user_progress.save() # Update the exisitng info.
+                user_progress.save()  # Update the exisitng info.
+                messages.success(request, 'Profile updated successfully')
             except UserProgress.DoesNotExist:
                 # create a new UserProgress object if none exists
                 user_progress = UserProgress(user=request.user,
@@ -29,6 +31,7 @@ def view_progress(request):
                 chest=form.cleaned_data['chest'],
                 waist=form.cleaned_data['waist'])
                 user_progress.save()
+                messages.success(request, 'Profile updated successfully')
 
             template = 'progress/progress.html'
             context = {
@@ -36,12 +39,17 @@ def view_progress(request):
             }
 
             return render(request, template, context)
-        
-    # if request method is GET display the form
-    form = UserProgressForm()
+
+    try:
+        user_progress = UserProgress.objects.get(user=request.user)
+        form = UserProgressForm(instance=user_progress)
+    except UserProgress.DoesNotExist:
+        #if request method is GET AND no UserProgress display the empty form
+        form = UserProgressForm()
+   
     context = {
         'form': form,
-        'user_progress':user_progress
+        'user_progress': user_progress,
     }
     template = 'progress/progress.html'
     return render(request, template, context)
