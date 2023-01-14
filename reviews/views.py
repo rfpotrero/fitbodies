@@ -32,7 +32,11 @@ def add_review(request, product_id):
     }
     return render(request, template, context)
 
+
 def view_reviews(request, product_id):
+    """
+    View to display all reviews for a specific product
+    """
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product_id=product.pk)
 
@@ -41,4 +45,19 @@ def view_reviews(request, product_id):
         'reviews': reviews,
         'product': product,
         }
+    return render(request, template, context)
+
+
+def my_reviews(request):
+    """
+    View to display all user's reviews 
+    """
+
+    reviews = Review.objects.filter(user=request.user)
+
+    template = 'reviews/my_reviews.html'
+    context = {
+        'reviews': reviews
+    }
+
     return render(request, template, context)
