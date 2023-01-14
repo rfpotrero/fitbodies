@@ -31,3 +31,14 @@ def add_review(request, product_id):
         'product': product
     }
     return render(request, template, context)
+
+def view_reviews(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product_id=product.pk)
+
+    template = 'reviews/view_reviews.html'
+    context = {
+        'reviews': reviews,
+        'product': product,
+        }
+    return render(request, template, context)
