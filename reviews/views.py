@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib import messages
 
 from .models import Review
 from .forms import ReviewForm
@@ -58,6 +59,34 @@ def my_reviews(request):
     template = 'reviews/my_reviews.html'
     context = {
         'reviews': reviews
+    }
+
+    return render(request, template, context)
+
+
+def update_review(request, review_id):
+    """ 
+    Update a user review
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    product = Product.objects.get(pk=review.product_id)
+     
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Review successfully updated!')
+            return redirect(reverse('my_reviews'))
+        else:
+            messages.error(request, 'Review could not be update please review the comment area')
+    else:
+        form = ReviewForm(instance=review)
+
+    template = 'reviews/update_review.html'
+    context = {
+        'form': form,
+        'review': review,
+        'product': product
     }
 
     return render(request, template, context)
