@@ -90,3 +90,11 @@ def update_review(request, review_id):
     }
 
     return render(request, template, context)
+
+
+def delete_review(request, review_id):
+    """ Delete a product from the store """
+    review = get_object_or_404(Review, pk=review_id)
+    review.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))

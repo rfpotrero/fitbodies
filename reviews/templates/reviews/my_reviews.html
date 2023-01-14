@@ -25,11 +25,8 @@
                             <hr>
                             <p class="mb-0">Create by {{ review.user }}</p>
                             <p class="mb-0">Last update {{ review.created_at }}</p>
-                            <form class=""method="POST" action="">
-                                <a href=" url 'products/products.html'" class="btn btn-danger rounded-0 mt-2">
-                                    <span class="text-uppercase">Delete</span>
-                                </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-2" value="Update">
+                                <a href="{% url 'delete_review' review.id %}">Delete</a>
+                                <a href="{% url 'update_review' review.id %}">Edit</a>
                             </form>
                             <hr>
                         </div>
