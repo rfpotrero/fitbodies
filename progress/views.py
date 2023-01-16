@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import UserProgress
 from .forms import UserProgressForm
 
-
+@login_required
 def view_progress(request):
     form = UserProgressForm()
 
