@@ -7,13 +7,13 @@ def index(request):
     return render(request, 'home/index.html')
 
 
-def personaltrainers(request):
+def trainers(request):
     """ A view to return the Personal Trainers page """
 
-    return render(request, 'home/index.html')
+    return render(request, 'home/trainers.html')
 
 
 def classes(request):
     """ A view to return the clases """
 
-    return render(request, 'home/index.html')
+    return render(request, 'home/classes.html')
