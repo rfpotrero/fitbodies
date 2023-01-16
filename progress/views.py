@@ -7,6 +7,9 @@ from .forms import UserProgressForm
 
 @login_required
 def view_progress(request):
+    """
+    View to display current user progress
+    """
     form = UserProgressForm()
 
     if request.method == 'POST':
@@ -53,9 +56,6 @@ def view_progress(request):
         form = UserProgressForm()
     context = {
         'form': form,
-        'user_progress': user_progress,
-        'kilos_to_go': kilos_to_go
     }
     template = 'progress/progress.html'
     return render(request, template, context)
-
