@@ -14,9 +14,19 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center align-self-center">
-                <h2 class="text-center">
-                    My reviews
-                </h2>
+                <hr>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link logo-font mb-4" href="{% url 'profile' %}"><H2>My Profile</H2></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link logo-font mb-4" href="{% url 'progress'%}"><h2>My Progress</h2></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active logo-font mb-4" href="{% url 'my_reviews'%}"><h2>My Reviews</h2></a>
+                    </li>
+                  </ul>
+                <hr>
                 <div class="image-container">
                     {% for review in reviews%}
                         <div class="product-details-container mb-5 mt-md-5">
