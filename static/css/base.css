@@ -10,6 +10,32 @@ body {
     font-family: 'Lato';
 }
 
+#try-for-free{
+        background: url('/media/try_for_free2.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #555;
+        font-family: 'Lato';
+}
+
+/* Custom CSS styles for the classes table */
+.table {
+    width: 100%;
+    text-align: center;
+  }
+  .th, td {
+    padding: 10px;
+  }
+  /* Style for class buttons */
+  .class-btn {
+    background-color: #3d55ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+
 /* from Bulma */
 .icon {
     align-items: center;

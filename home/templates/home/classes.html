@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+    <div class="container">
+    <table class="table table-striped col-lg-8 align-self-center">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>6:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#yoga">Yoga</button></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#yoga">Yoga</button></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#spinning">Spinning</button></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#yoga">Yoga</button></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#spinning">Spinning</button></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#hiit">HIIT</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#spinning">Spinning</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#fullbody">Fullbody</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9:00 AM</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:00 AM</td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#fullbody">Fullbody</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#kettlebells">Kettlebells</button></td>
+          <td></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#kettlebells">Kettlebells</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19:00 AM</td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#hiit">HIIT</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#pilates">Pilates</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#kettlebells">Kettlebells</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20:00 AM</td>
+          <td></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#kettlebells">Kettlebells</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#hiit">HIIT</button></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21:00 AM</td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#hiit">HIIT</button></td>
+          <td></td>
+          <td><button class="class-btn" data-toggle="modal" data-target="#fullbody">Fullbody</button></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<!-- Modal Yoga -->
+<div class="modal fade" id="yoga" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>This class incorporates yoga postures, gentle movement sequences, breath work, 
+          supported silent meditation, and guided relaxation to support increased awareness and mindfulness of the breath and body, and quieting of the nervous system.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Spinning -->
+<div class="modal fade" id="spinning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Spinning is a form of exercise with classes focusing on endurance, strength, intervals, high intensity and recovery 
+          with a mix of fast sprints and heavy climbs all timed to the beat of the music, 
+          you'll be counting down the hours till you're back in the saddle once again <br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Fullbody -->
+<div class="modal fade" id="fullbody" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>A full body workout is just what it sounds like: a workout that aims to hit all the major muscle groups in one single session. <br>
+        This will ensure no muscle is left behind, this type of workout helps with injury prevention and to improve the general tone of the body </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal HIIT -->
+<div class="modal fade" id="hiit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">HIIT</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>High-intensity interval training (HIIT) workouts are a popular kind of exercise that involve exerting your maximum energy during short periods of time.
+
+          HIIT workouts require you bursts of high-intensity strength and cardio exercises followed by brief periods of recovery. <br>
+          It is almost like taking an hour-long workout with moderate intensity and squeezing it all into a period of about 10 to 30 minutes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Kettlebells -->
+<div class="modal fade" id="kettlebells" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kettlebells</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Kettlebell class is a high-intensity-ballistic workout that can help meet your toughest fitness goals! <br>
+          It combines functional, compound exercises such as “the swing,” “the clean” and “the press” that will work multiple muscle groups.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pilates -->
+<div class="modal fade" id="pilates" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Pilates Mat classes are a full body workout that create long, lean muscles. Pilates Mat is performed on a mat on the floor and achieves results by 
+          using gravity and your body's own resistance — and sometimes small props, such as foam rollers, the magic circle or ring, balls or weights.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
