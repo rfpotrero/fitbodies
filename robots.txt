@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /account/
+Disallow: /profiles/
+Disallow: /bag/
+Disallow: /admin/
+Sitemap: https://fitbodies.herokuapp.com/sitemap.xml
