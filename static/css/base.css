@@ -17,8 +17,8 @@ body {
     font:14px Helvetica,Arial,sans-serif;  
     width:500px;
 }
-/* style for Contact Us area */
 
+/* style for Contact Us area */
 .contact-font{
     letter-spacing: 2px;
     font-size: 18px;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-/* Custom CSS styles for the classes table */
+/* style for the classes table */
 .table {
     width: 100%;
     text-align: center;

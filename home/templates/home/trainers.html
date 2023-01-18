@@ -10,72 +10,125 @@
 {% endblock %}
 
 {% block content %}
+<div class="overlay"></div>
 <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Personal Trainer 1</h3>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Name: John Doe</li>
-              <li class="list-group-item">Specialization: Strength Training</li>
-              <li class="list-group-item">Experience: 8 years</li>
-              <li class="list-group-item">Certifications: CSCC</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Personal Trainer 2</h3>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Name: Jane Doe</li>
-              <li class="list-group-item">Specialization: Kettlebell, Cardio</li>
-              <li class="list-group-item">Experience: 8 years</li>
-              <li class="list-group-item">Certifications: National Qualification in Kettlebell Training</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Personal Trainer 3</h3>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Name: Mike Johnson</li>
-              <li class="list-group-item">Specialization: Bodybuilding</li>
-              <li class="list-group-item">Experience: 10 years</li>
-              <li class="list-group-item">Certifications: CPD Award in Coaching Olympic Lifting</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Personal Trainer 4</h3>
-          </div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Name: Emily Davis</li>
-              <li class="list-group-item">Specialization: Pilates, Rehab</li>
-              <li class="list-group-item">Experience: 12 years</li>
-              <li class="list-group-item">Certifications: Advanced Diploma in Pilates Matwork</li>
-            </ul>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="card">
+        <img src="../media/johndoePT.jpg" class="card-img-top" alt="John Doe Personal Trainer">
+        <div class="card-body">
+          <h5 class="card-title"><strong>John Doe</strong></h5>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="johndoePT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Read Bio
+            </button>
+            <div class="dropdown-menu" aria-labelledby="johndoePT">
+              <p class="dropdown-item">
+                <ul class="list-unstyled">
+                <li class="list-group-item"><strong>Specializations: </strong>Strength Training, Fullbody</li>
+                <li class="list-group-item"><strong>Experience:</strong> 8 years</li>
+                <li class="list-group-item"><strong>Certifications:</strong> CSCC</li>
+                </ul>
+                <p class="p-2">
+                  Hi my name is John. I have been training here the 
+                  past 4 years and have grown a love for weight lifting and all other aspects of fitness.
+                  <br>
+                  I am hard working and motivated,always improving and learning new things in regards to fitness
+                  when you see the results that your body can give you from hard work and
+                  Consistency it makes it all worth it.
+                </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card">
+        <img src="../media/janedoePT.jpg" class="card-img-top" alt="Jane Doe Personal Trainer">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Jane Doe</strong></h5>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="johndoePT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Read Bio
+            </button>
+            <div class="dropdown-menu" aria-labelledby="johndoePT">
+              <p class="dropdown-item">
+                <ul class="list-unstyled">
+                <li class="list-group-item"><strong>Specializations: </strong>Kettlebell, Cardio</li>
+                <li class="list-group-item"><strong>Experience:</strong> 6 years</li>
+                <li class="list-group-item"><strong>Certifications:</strong> National Qualification in Kettlebell Training</li>
+                </ul>
+                <p class="p-2">
+                  My goal is to help people achieve their goals in a way that suits their lifestyle and needs and to make it as enjoyable 
+                  and sustainable as possible.
+                  <br> 
+                  My qualifications also include Beauty therapy and counselling & psychotherapy so if you need 
+                  any advice do nott hesitate to give me a shout, I will help in any way that will help you be the best version of yourself.
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card">
+        <img src="../media/emilyPT.jpg" class="card-img-top" alt="Emily Davis Personal Trainer">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Emily Davis</strong></h5>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="emilyPT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Read Bio
+            </button>
+            <div class="dropdown-menu" aria-labelledby="emilyPT">
+              <p class="dropdown-item">
+                <ul class="list-unstyled">
+                <li class="list-group-item"><strong>Specializations: </strong>Pilates, Rehab</li>
+                <li class="list-group-item"><strong>Experience:</strong> 12 years</li>
+                <li class="list-group-item"><strong>Certifications:</strong> Advanced Diploma in Pilates Matwork</li>
+                </ul>
+                <p class="p-2">
+                  I am here to help you along with your fitness journey whether it is weight loss, muscle gain, strength or
+                   even just to help you with your overall health and fitness. 
+                   <br>
+                   Anything I can do to help you as a trainer feel free to contact me 
+                   for a free consultation and let me help you achieve your goals!
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card">
+        <img src="../media/mikePT.jpg" class="card-img-top" alt="Mike Johnson Personal Trainer">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Mike Johnson</strong></h5>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="mikePT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Read Bio
+            </button>
+            <div class="dropdown-menu" aria-labelledby="mikePT">
+              <p class="dropdown-item">
+                <ul class="list-unstyled">
+                <li class="list-group-item"><strong>Specializations: </strong>Bodybuilding, Olympic Lifting</li>
+                <li class="list-group-item"><strong>Experience:</strong> 12 years</li>
+                <li class="list-group-item"><strong>Certifications:</strong> CPD Award in Coaching Olympic Lifting</li>
+                </ul>
+                <p class="p-2">
+                  My approach to fitness is to treat it as a lifestyle and to help build habits and routines that will help you achieve 
+                  those goals in a way that works around and into our normal everyday responsibilities with work, family and friends.
+                  <br>
+                  Whether you want to get LEAN, STRONG, or just have CONFIDENCE in and out of the gym, I can help you!
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
 
