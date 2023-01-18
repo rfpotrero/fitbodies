@@ -18,13 +18,36 @@
                     <form method="POST" action="{% url 'update_review' review.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <a href=" url 'products/products.html'" class="btn btn-outline-black rounded-0 mt-5">
+                        <a href=" url 'my_reviews'" class="btn btn-outline-black rounded-0 mt-5">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="text-uppercase">Return</span>
                         </a>
-                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Update">
+                        <button type="button" class="btn btn-black rounded-0 text-uppercase mt-5" data-toggle="modal" data-target="#updateModal">
+                            Update
+                          </button>
+                    
+                        <!-- Modal for Update confirmation -->
+                        <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModal" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Update</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                <p>Are you sure you want to update this review?</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-primary" value="Update">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -35,6 +58,27 @@
                     <p class="mt-3">{{ product.description }}</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+     <!-- Modal for Update confirmation -->
+     <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Update</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <p>Are you sure you want to update this review?</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a class="btn btn-secondary" href="{% url 'update_review' review.id %}">Edit</a>
+            </div>
+        </div>
         </div>
     </div>
 {% endblock %}
