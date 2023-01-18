@@ -28,6 +28,14 @@ body {
     overflow: hidden;
 }
 
+/* My reviews style */
+
+.hr-review {
+    height: 0px;
+    border: none;
+    border-top: 1px solid black;
+}
+
 /* style for the classes table */
 .table {
     width: 100%;
