@@ -35,17 +35,44 @@ For this project we have identified the following personas based on the expected
 ## Features
 ___
    *  Ability to browser the site.
+      * The landing page will be display as the first thing the visiting see. 
+
    *  Ability Register in the site 
+      - The will register in the site using the links under My Account
+      ![myaccount](assets/documentation/myaccount.png)
+   *  Ability to login to the site. 
+      ![login](assets/documentation/login.png)
    *  Ability Request a new password
-   *  Ability to view the different products available for purchase on different pages 
-   *  Ability to sort out by product, ie: meal plan, personal trainer plan, etc..
+      ![passreset](assets/documentation/passreset.png)
+   *  Ability to shop by categories under the Store link
+      * Clicking in the Store nav-bar link will display the categories
+      ![categories](assets/documentation/categories.png)
    *  Ability to viw product details
-   *  Ability to add items the cart and update the cart to remove or keep adding items.
-   *  Ability to perfom a payment to obtain those items
+      ![productdetails](assets/documentation/productdetails.png)
+   *  Ability to add items the shopping bag
+      ![addtobag](assets/documentation/addtobag.png)
+   *  Ability to remove items from the shopping bag
+      ![removefrombag](assets/documentation/removefrombag.png)
+   *  Ability to see the items in the shopping bag
+      ![viewbag](assets/documentation/viewbag.png)
+   *  Ability to go to checkout to enter thei details
+      ![checkout](assets/documentation/checkout.png)
+   *  Ability to proceed to payments 
+      ![paymentsuccess](assets/documentation/paymentsuccess.png)
    *  Ability to see and update their personal information 
+      ![profile](assets/documentation/profile.png)
+   *  Ability to see old orders
+      ![profileorders](assets/documentation/profileorders.png)
    *  Ability to track and update their progress 
-   *  Ability to track see their reviews and edit them
+      ![progress](assets/documentation/progress.png)
+   *  Ability to track see their reviews
+      ![review](assets/documentation/review.png)
+   *  Ability to update their review 
+      ![updatereview](assets/documentation/updatereview.png)
+   *  Ability to delete their review
+      ![updatereview](assets/documentation/updatereview.png)
    *  Ability to Contact the business via form
+      ![contactform](assets/documentation/contactform.png)
 
 ## Future features
 ___
@@ -58,7 +85,19 @@ ___
 
 ### Search Engine Optimization (SEO)
 
-* 
+* Wordtracker and Google Keyword planner were used to increase ranking and curate the list of keywords used. A combination of short and long tail keyworks were used.
+
+## Content Marketing 
+* The gym does not have a blog of something that generated a big amount of articles for content Marketing however this happenig in he class description, the personal trainer section and product description. 
+
+## Social Media
+* The facebook page will be used to generate interested and to build community by running events and showing the classes to encourage more people to join. This communit will grow organically and will required care during the early stages with automated post and frequent 
+interaction to generate engagement. 
+
+* Facebook Business also have option to boots their ads to increase reach targetting by interests, age, demographic, location, etc..this ideal for the business since it is location dependant and focus a very specific target of population. 
+
+* The page Facebook page can be found HERE and adding a screenshot in case it will be taking down. 
+  - ![facebook](assets/documentation/facebook.png)
 
 ## Desing and Diagrams
 ___
