@@ -18,10 +18,14 @@ def add_review(request, product_id):
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
-            comment = form.save(commit=False)
-            comment.user = request.user
-            comment.product = product
-            comment.save()
+            existing_review = Review.objects.filter(user=request.user, product=product).first()
+            if existing_review:
+                messages.error(request, 'You have reviewed this product already')
+            else:
+                comment = form.save(commit=False)
+                comment.user = request.user
+                comment.product = product
+                comment.save()
 
             return redirect('product_detail', product_id=product.pk)
 
