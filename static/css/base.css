@@ -10,19 +10,23 @@ body {
     font-family: 'Lato';
 }
 
-#try-for-free{
-        background: url('/media/try_for_free2.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: #555;
-        font-family: 'Lato';
-}
-
 /* style for mailing list subscription */
 #mc_embed_signup{
     background:rgb(211, 206, 206); 
     clear:left; 
     font:14px Helvetica,Arial,sans-serif;  
     width:600px;}
+
+/* style for Contact Us area */
+
+.contact-font{
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.map-image{
+    overflow: hidden;
+}
 
 /* Custom CSS styles for the classes table */
 .table {

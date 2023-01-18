@@ -15,25 +15,58 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <H3>Who is FitBodies?</H3>
+                    <hr>
+                    <div class="contact-font font-weight-normal text-left">
+                        <p class="p-2">
+                            We are based in the south of Dublin and we believe everyone deserves adequate support to reach their goals. 
+                        </p>
+                        <p class="p-2">
+                            This started as a group of friends around a table and culmiated in opening our own dream gym! Witah all the 
+                            high-spes pluse affordable and we have a range of flexible options so you can find a Membership option that suits you.
+                        </p>
+                        <p class="p-2">
+                            Drop by and see it for youself!
+                        </p>
+                    </div>
+                    <div class="p-4 contact-font">
+                        <h4>You can find us at the following address:</h4>
+                        <a href="https://www.google.com/maps/@53.3318562,-6.235492,14.9z"><ul class="list-unstyled">
+                            <li>123, Dublin Street</li>
+                            <li>South Dublin</li>
+                        </ul>
+                        </a>
+                    </div>
+                    <div class="map-image">
+                        <img src="https://fitbodies.s3.eu-west-1.amazonaws.com/media/map.png" alt="map to the gym location">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <h3>Let us know how we can help you</h3>
+                    <hr>
                     <form method="POST" action="{% url 'contact' %}">
                         {% csrf_token %}
                         <fieldset class="rounded px-3 mb-5">
                             {{ form.name | as_crispy_field }}
                             {{ form.email | as_crispy_field }}
                             {{ form.contact_reason | as_crispy_field }}
+                            {{ form.message | as_crispy_field }}
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Submit">
                         </fieldset>
-                        
+                    </form>
+                </div>
+                <div class="d-flex">
+                    <div class="mx-3">
+                        <H1><i class="fa-solid fa-phone-volume"></i></H1>
+                    </div>
+                    <div class="mx-3">
+                        <H4>Call Us</H4>
+                        <H3>+35312345678</H3>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <fieldset class="rounded px-3 mb-5">
-                        {{ form.message | as_crispy_field }}
-                    </fieldset>
-                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Submit">
-                </div>
-            </div>
-        </form>
         </div>
     </div>
 {% endblock %}
