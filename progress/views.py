@@ -36,7 +36,10 @@ def view_progress(request):
                 chest=form.cleaned_data['chest'],
                 waist=form.cleaned_data['waist'])
                 user_progress.save()
-                kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
+                if user_progress.weight_goal and user_progress.weight:
+                    kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
+                else:
+                    kilos_to_go = None
                 messages.success(request, 'Profile updated successfully')
 
             template = 'progress/progress.html'
@@ -51,7 +54,10 @@ def view_progress(request):
     try:
         user_progress = UserProgress.objects.get(user=request.user)
         form = UserProgressForm(instance=user_progress)
-        kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
+        if user_progress.weight_goal and user_progress.weight:
+            kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
+        else:
+            kilos_to_go = None
         context = {
             'form': form,
             'user_progress': user_progress,
