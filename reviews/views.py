@@ -54,7 +54,7 @@ def view_reviews(request, product_id):
 @login_required
 def my_reviews(request):
     """
-    View to display all user's reviews 
+    View to display all user's reviews
     """
 
     reviews = Review.objects.filter(user=request.user)
@@ -74,6 +74,10 @@ def update_review(request, review_id):
     """
     review = get_object_or_404(Review, pk=review_id)
     product = Product.objects.get(pk=review.product_id)
+
+    if review.user != request.user:
+        messages.error(request, 'This action is not allowed.')
+        return redirect(reverse('my_reviews'))
      
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
@@ -98,8 +102,11 @@ def update_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
-    """ Delete a product from the store """
+    """ Deletes a user review  """
     review = get_object_or_404(Review, pk=review_id)
+    if review.user != request.user:
+        messages.error(request, 'This action is not allowed.')
+        return redirect(reverse('my_reviews'))
     review.delete()
-    messages.success(request, 'Product deleted!')
+    messages.success(request, 'Review deleted!')
     return redirect(reverse('products'))
