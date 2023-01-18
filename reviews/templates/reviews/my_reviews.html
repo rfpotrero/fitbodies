@@ -29,18 +29,19 @@
                 <hr>
                 <div class="image-container">
                     {% for review in reviews%}
-                        <div class="product-details-container mb-5 mt-md-5">
-                            <hr>
+                        <h5> Review for: <strong>{{ review.product }}</strong></h5>
+                        <div class="product-details-container mb-5 mt-md-2">
+                            <hr class="hr-review">
                             <p class="mb-0 text-wrap">{{ review.comment }}</p>
-                            <hr>
-                            <p class="mb-0">Create by {{ review.user }}</p>
-                            <p class="mb-0">Last update {{ review.created_at }}</p>
+                            <hr class="hr-review">
+                            <p class="mb-0">Create by <strong>{{ review.user }}</strong></p>
+                            <p class="mb-0">Last update <strong>{{ review.created_at }}</strong></p>
                             <!-- Buttom for Delete modal -->
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
                                 Delete
                               </button>
                               <a class="btn btn-secondary" href="{% url 'update_review' review.id %}">Edit</a>
-                            <hr>
+                            <hr class="hr-review">
                         </div>
                         <!-- Modal for Delete confirmation -->
                         <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
