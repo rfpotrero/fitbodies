@@ -1,10 +1,9 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from products.models import Product
 from .models import Review
 from .forms import ReviewForm
-from products.models import Product
 
 
 @login_required
@@ -20,7 +19,8 @@ def add_review(request, product_id):
         if form.is_valid():
             existing_review = Review.objects.filter(user=request.user, product=product).first()
             if existing_review:
-                messages.error(request, 'You have reviewed this product already')
+                messages.error(request,
+                               'You have reviewed this product already')
             else:
                 comment = form.save(commit=False)
                 comment.user = request.user
@@ -73,7 +73,7 @@ def my_reviews(request):
 
 @login_required
 def update_review(request, review_id):
-    """ 
+    """
     Update a user review
     """
     review = get_object_or_404(Review, pk=review_id)
@@ -82,7 +82,7 @@ def update_review(request, review_id):
     if review.user != request.user:
         messages.error(request, 'This action is not allowed.')
         return redirect(reverse('my_reviews'))
-     
+
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
@@ -90,7 +90,8 @@ def update_review(request, review_id):
             messages.success(request, 'Review successfully updated!')
             return redirect(reverse('my_reviews'))
         else:
-            messages.error(request, 'Review could not be update please review the comment area')
+            messages.error(request,
+                           'Review could not be update please review the comment area')
     else:
         form = ReviewForm(instance=review)
 
