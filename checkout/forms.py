@@ -1,9 +1,12 @@
+""" Forms.py for checkout app """
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ Order to collect the user details """
     class Meta:
+        """ Use the order model and display specific fields """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
