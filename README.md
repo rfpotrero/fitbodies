@@ -99,7 +99,7 @@ interaction to generate engagement.
 
 * Facebook Business also have option to boots their ads to increase reach targetting by interests, age, demographic, location, etc..this ideal for the business since it is location dependant and focus a very specific target of population. 
 
-* The page Facebook page can be found HERE and adding a screenshot in case it will be taking down. 
+* The page Facebook page can be found [HERE](https://www.facebook.com/profile.php?id=100089238622942) and adding a screenshot in case it will be taking down. 
   - ![facebook](assets/documentation/facebook.png)
 
 ## Desing and Diagrams
@@ -119,10 +119,11 @@ ___
    * CSS
    * Javascript
    * Python 3.8
+  
    ### APIs
    * [Stripe](www.stripe.com)
      * API used to proccess client payments
-   * Amazon S3 Storage
+   * [Amazon](aws.amazon.com) S3 Storage
      * Using amazon S3 Storage to storage media and static files for deployment.
    ### Database
    * PostgresQL. This databased is hostes by [ElephantSQL](https://www.elephantsql.com/)
@@ -131,6 +132,7 @@ ___
    ### Libraries
    * [Allauth](https://django-allauth.readthedocs.io/en/latest/overview.html)
    * [Crispy Forms]()
+   * [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 
 ## Test Cases 
 ___
@@ -161,12 +163,30 @@ ___
 | Delete My Reviews | User delete their reviews  | The user can delete their review a warning appears before deleting |**Pass** |
 | Add review | If they user is logged they can leave a review  | The user can see the submit review area and submit review |**Pass** |
 
+## Code Validators 
+
+  <details>
+  <summary>Lighthouse Report</summary>
+  ![](assets/documentation/lighthousereport.png)
+  </details> 
+
+  <details>
+  <summary>CSS Validation</summary> 
+  ![](assets/documentation/cssvalidation.png)
+  </details> 
+
+  <summary>HTML Validation </summary>
+  ![](assets/documentation/htmlvalidation.png)
+  </details> 
+
+  <summary>pycodestyle Validation</summary>
+  ![](assets/documentation/pycodestyle.png)
+  </details> 
+
 ## Fixed bugs
 ___
 - 
-## Supported screens and Browsers
-___
-   - 
+
 ## Deployment
 ___
    - [Heroku](heroku.com) deployment   
