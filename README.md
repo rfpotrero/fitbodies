@@ -1,7 +1,8 @@
 ## Purpose of the project
 ___
    * The purpose of the project is to create an e-commerce site to apply all knowledge gained thorugh the course. The site is built using django. 
-   *The site represent a ficticious gym that offers subscriptions,Personal Trainer plans and meal plans. 
+
+   * The site represent a ficticious gym that offers subscriptions,Personal Trainer plans and meal plans. 
 
 ## Personas 
 
@@ -19,18 +20,23 @@ For this project we have identified the following personas based on the expected
 |            Visiting User                          |
 |          #2                               |  As a visiting user I can browse the site   |
 |          #7                    |   As a visiting user I want to browse the products  |
+|          #79                |   As a visiting user I can contact the business  |
+|          Registered User                               |
+|             #43             |   As a registed user I can see my previous orders  |
+|             #59              |   As a registed user I can track my progress  |
+|             #67            |   As a registed user I edit my reviews  |
 |           Shopper                           |
 |          #13                               |   As a shopper I wan to add products to the bag    |
 |          #29                      |  As a shopper I can adjust the bag before paying for it    |
 |          #29                                |   As a shopper I can checkout to pay for the items    |
-|          #67             |   As a shopper I can leave comments in products    |
-|                                Business Owners       |
+|          #67             |   As a shopper I can leave reviews in products    |
+|           Business Owners       |
 |          #32                      |   As a business ower I can review and adjust the ordesr so that I can have visibility on my clients purchases   |
 |           #52                     |  As a business owner I can add new products so that I can keep updating my site   |
 |           #86                    |   Story As a business owner I am able to see the contact enquiries   |
-|                                |      |
-|                                |      |
-|                                |      |
+|           #52                   |   Story As a business owner I am able to see the reviews   |
+|           #13              |   Story As a business owner I can add, update and remove products  |
+
 
 ## Features
 ___
@@ -376,5 +382,5 @@ ___
 ___
    * Official docummenation https://djangoproject.com
    * Bootstrap code https://getbootstrap.com/
-   * E-Commerce core functionality by Code Institute boutique Ado
-   * Images 
+   * E-Commerce core functionality by [Code Institute boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+   * Images by [Pexels](https://www.pexels.com/)
