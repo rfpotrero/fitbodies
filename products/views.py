@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Product, Category
-from .forms import ProductForm
 from reviews.forms import ReviewForm
 from reviews.models import Review
+from .models import Product, Category
+from .forms import ProductForm
+
 
 # Create your views here.
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -26,6 +28,7 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
@@ -56,7 +59,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,

@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Category(models.Model):
-
+    """ Model product categories """
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -18,7 +18,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    """ Model for products """
+    category = models.ForeignKey('Category', null=True,
+                                 blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
