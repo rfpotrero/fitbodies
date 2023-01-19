@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProgress
 from .forms import UserProgressForm
 
+
 @login_required
 def view_progress(request):
     """
@@ -16,7 +17,7 @@ def view_progress(request):
     if request.method == 'POST':
         form = UserProgressForm(request.POST)
         if form.is_valid():
-        # check if user already has a UserProgress object
+            # check if user already has a UserProgress object
             try:
                 user_progress = UserProgress.objects.get(user=request.user)
                 # update the existing object with form data
@@ -31,11 +32,11 @@ def view_progress(request):
             except UserProgress.DoesNotExist:
                 # create a new UserProgress object if none exists
                 user_progress = UserProgress(user=request.user,
-                height=form.cleaned_data['height'],
-                weight=form.cleaned_data['weight'],
-                weight_goal=form.cleaned_data['weight_goal'],
-                chest=form.cleaned_data['chest'],
-                waist=form.cleaned_data['waist'])
+                                             height=form.cleaned_data['height'],
+                                             weight=form.cleaned_data['weight'],
+                                             weight_goal=form.cleaned_data['weight_goal'],
+                                             chest=form.cleaned_data['chest'],
+                                             waist=form.cleaned_data['waist'])
                 user_progress.save()
                 if user_progress.weight_goal and user_progress.weight:
                     kilos_to_go = int(user_progress.weight_goal) - int(user_progress.weight)
@@ -51,7 +52,7 @@ def view_progress(request):
             }
 
             return render(request, template, context)
-    
+
     try:
         user_progress = UserProgress.objects.get(user=request.user)
         form = UserProgressForm(instance=user_progress)
@@ -66,9 +67,9 @@ def view_progress(request):
                 }
         template = 'progress/progress.html'
         return render(request, template, context)
-        
+
     except UserProgress.DoesNotExist:
-        #if request method is GET AND no UserProgress display the empty form
+        # if request method is GET AND no UserProgress display the empty form
         form = UserProgressForm()
     context = {
         'form': form,
