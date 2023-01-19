@@ -51,7 +51,7 @@ ___
       ![productdetails](assets/documentation/productdetails.png)
    *  Ability to add items the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
       * The shopper can add product to the bag and going to checkout or keep shopping
-      ![addtobag](assets/documentation/addtobag.png)
+      * ![addtobag](assets/documentation/addtobag.png)
    *  Ability to remove items from the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
       * The shoper can remove items from the bag
       ![removefrombag](assets/documentation/removefrombag.png)
