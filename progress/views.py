@@ -11,6 +11,7 @@ def view_progress(request):
     View to display current user progress
     """
     form = UserProgressForm()
+    kilos_to_go = None
 
     if request.method == 'POST':
         form = UserProgressForm(request.POST)
