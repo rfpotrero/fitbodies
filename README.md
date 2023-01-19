@@ -129,11 +129,30 @@ interaction to generate engagement.
 ## Desing and Diagrams
 ___
    ### Database Diagrams
-   * ER diagram 
+   * To see the ER diagram click below
+   <details>
+  <summary> ER Diagram</summary>
+
+  ![ER](assets/documentation/erdiagram.png)
+  
+  </details>
      
     
    ### Wireframes
-   * 
+
+   * To see the Wireframes click below
+   <details>
+   <summary> Wireframes</summary>
+
+   ![](assets/wireframes/Landing.png)
+   ![](assets/wireframes/produtcts.png)
+   ![](assets/wireframes/productdetail.png)
+   ![](assets/wireframes/ContactUs.png)
+   ![](assets/wireframes/personaltrainers.png)
+   ![](assets/wireframes/assets/wireframes/classes.png)
+  
+  </details>
+
    
 
 ## Technology
