@@ -167,25 +167,37 @@ ___
 
   <details>
   <summary>Lighthouse Report</summary>
-  ![](assets/documentation/lighthousereport.png)
+
+  ![lighthouse](assets/documentation/lighthousereport.png)
+  
+</details> 
+  <details>
+  <summary>CSS Validation</summary> 
+
+  ![](assets/documentation/cssvalidation.png)
+  
   </details> 
 
   <details>
-  <summary>CSS Validation</summary> 
-  ![](assets/documentation/cssvalidation.png)
-  </details> 
-
   <summary>HTML Validation </summary>
+
   ![](assets/documentation/htmlvalidation.png)
+  
   </details> 
 
+  <details>
   <summary>pycodestyle Validation</summary>
+  
   ![](assets/documentation/pycodestyle.png)
+  
   </details> 
 
 ## Fixed bugs
 ___
-- 
+- Fix image link in product detail #106
+  - Since the pictures are based per category rather individual product. This was fixing by rendering the object product.image_url instead of product.image.url
+- Progress kilos_to_go field was crashing the view while empty #105
+  - When one the values in the kilos_to_go calculation is empty the progress view crashes due the kilos_to_go caculation requiring an int. Adding validation to see if both values exist and if not set kilos_to_go to none. 
 
 ## Deployment
 ___
