@@ -46,36 +46,60 @@ ___
    *  Ability to shop by categories under the Store link [#7](https://github.com/rfpotrero/fitbodies/issues/7)
       * Clicking in the Store nav-bar link will display the categories
       ![categories](assets/documentation/categories.png)
-   *  Ability to viw product details [#7](https://github.com/rfpotrero/fitbodies/issues/7)
+   *  Ability to view product details [#7](https://github.com/rfpotrero/fitbodies/issues/7)
+      * Clicking in the product displays a full description of the item
       ![productdetails](assets/documentation/productdetails.png)
    *  Ability to add items the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
+      * The shopper can add product to the bag and going to checkout or keep shopping
       ![addtobag](assets/documentation/addtobag.png)
    *  Ability to remove items from the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
+      * The shoper can remove items from the bag
       ![removefrombag](assets/documentation/removefrombag.png)
    *  Ability to see the items in the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
+      * The shopper can view the items in the back return to keep shopping.
       ![viewbag](assets/documentation/viewbag.png)
    *  Ability to go to checkout to enter their details [#29](https://github.com/rfpotrero/fitbodies/issues/29)
+      * The shopper can proceed to checkout and enter their details there
       ![checkout](assets/documentation/checkout.png)
    *  Ability to proceed to payments [#29](https://github.com/rfpotrero/fitbodies/issues/29)
+      * The shopper can proceed to payment 
       ![paymentsuccess](assets/documentation/paymentsuccess.png)
    *  Ability to see and update their personal information [#43](https://github.com/rfpotrero/fitbodies/issues/43)
+      * The registered user is able to see their save information
       ![profile](assets/documentation/profile.png)
    *  Ability to see old orders [#43](https://github.com/rfpotrero/fitbodies/issues/43)
+      * The registered user is able to see their past orders
       ![profileorders](assets/documentation/profileorders.png)
    *  Ability to track and update their progress [#59](https://github.com/rfpotrero/fitbodies/issues/59)
+      * The registered user is able to enter their progress goals
       ![progress](assets/documentation/progress.png)
    *  Ability to track see their reviews [#67](https://github.com/rfpotrero/fitbodies/issues/67)
+      * The registered user is able to see alll their reviews and update or delete them
       ![review](assets/documentation/review.png)
    *  Ability to update their review [#67](https://github.com/rfpotrero/fitbodies/issues/67)
+      * The registered user is able to update their reviews
       ![updatereview](assets/documentation/updatereview.png)
    *  Ability to delete their review [#67](https://github.com/rfpotrero/fitbodies/issues/67)
+      * The registered user is able to delete their reviews
       ![updatereview](assets/documentation/updatereview.png)
    *  Ability to Contact the business via form [#79](https://github.com/rfpotrero/fitbodies/issues/79)
+      A visiting or register user can use the contact form to reach the business
       ![contactform](assets/documentation/contactform.png)
    *  Ability to add new product to the site  [#59](https://github.com/rfpotrero/fitbodies/issues/59)
+      * An admin can add new products to the site. 
+      ![addproduct](assets/documentation/adminaddproduct.png)
    *  Ability to adjust existing product on the site [#13](https://github.com/rfpotrero/fitbodies/issues/13)
+      * An admin can modify existing products
+      ![updateproduct](assets/documentation/adminupdatingproduct.png)
    *  Ability to see the contact enquiries [#86](https://github.com/rfpotrero/fitbodies/issues/86)
+      * An admin can see the contact enquiries
+      ![admincontact](assets/documentation/admincontact.png)
    *  Ability to adjust orders [#32](https://github.com/rfpotrero/fitbodies/issues/32)
+      * An admin can update orders
+      ![adminupdateorder](assets/documentation/adminupdateorder.png)
+   *  Ability view reviews [#32](https://github.com/rfpotrero/fitbodies/issues/32)
+      * An admin can see the reviews and update if required
+      ![adminupdateorder](assets/documentation/adminreview.png)
 
 ## Future features
 ___
