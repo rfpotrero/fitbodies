@@ -169,7 +169,7 @@ ___
    - 
 ## Deployment
 ___
-   * [Heroku](heroku.com) deployment   
+   - [Heroku](heroku.com) deployment   
      - Browse to heroku and login
      - Upper right corner. Click in New and select New App
      - Choose a Name for the app and a Region
@@ -177,50 +177,85 @@ ___
      - Click in Settings, under builpacks select: 
        - Heroku/Python
      - Click in Resources
-     - [ElephantSQL.com](https://www.elephantsql.com/) database 
-       - Navigate [ElephantSQL.com](https://www.elephantsql.com/) and click “Get a managed database today”
-       - Select “Try now for FREE”
-       - Select “Log in with GitHub” and proceed with authorization
-       - Create a database
-       - Set up your plan - Tiny Turtle is a free tier
-       - In “Select Region” choose the closed to you or your users
-       - Click “Review”
-       - Click "Create Instance"
-     - [Stripe](stripe.com)
-       - Click in register and complete the registration process
-       - Click in Developers
-       - Click in API Keys
-       - Writedown the apis as they will be used in the Heroku config below
-       - Cick in Webhook
-       - Click in Add Endpoint and add https://fitbodies.herokuapp.com/checkout/wh/
-       - Take note of the endpoint secret. This will be used in the Heroku Config below
-     - [Amazon](aws.amazon.com)
-       - Create an amazon account
-       - Go to Amazon dashboard and search for S3
-       - Create a bucket called fitbodies
-       - Select your AWS Region
-       - Uncheck "Block all public acess" and check the warning message
-       - Navigate to Properties
-       - Navigate to Static and click edit
-       - Turn On Static Website Hosting
-       - Enter index.html and error.html in their respective fields 
-       - In Permissions, click edit in the CORS section and enter the [FOLLOWING]() configuration
-       - Click edit in buckect policy and generate the FOLLOWING policy
-       - The above generates THIS policy 
-       - In Access Control List set the List permissions to everyone under Public Access
-       - Go to IAM. 
-       - Click on Policies and Create Policy
-       - Click in JSON and import the Amazon pre-built policy AmazonS3FullAccess
-       - Click in Review Policy. 
-       - Set a name and description
-       - Click in Create Policy
-       - Click in Add User to create a user
-       - Add the user 
-       - Download the CSV files with the keys that we will using in heroku
-     - Click in Settings again
+   - [ElephantSQL.com](https://www.elephantsql.com/) database 
+      - Navigate [ElephantSQL.com](https://www.elephantsql.com/) and click “Get a managed database today”
+      - Select “Try now for FREE”
+      - Select “Log in with GitHub” and proceed with authorization
+      - Create a database
+      - Set up your plan - Tiny Turtle is a free tier
+      - In “Select Region” choose the closed to you or your users
+      - Click “Review”
+      - Click "Create Instance"
+   - [Stripe](stripe.com)
+      - Click in register and complete the registration process
+      - Click in Developers
+      - Click in API Keys
+      - Writedown the apis as they will be used in the Heroku config below
+      - Cick in Webhook
+      - Click in Add Endpoint and add https://fitbodies.herokuapp.com/checkout/wh/
+      - Take note of the endpoint secret. This will be used in the Heroku Config below
+   - [Amazon](aws.amazon.com)
+      - Create an amazon account
+      - Go to Amazon dashboard and search for S3
+      - Create a bucket called fitbodies
+      - Select your AWS Region
+      - Uncheck "Block all public acess" and check the warning message
+      - Navigate to Properties
+      - Navigate to Static and click edit
+      - Turn On Static Website Hosting
+      - Enter index.html and error.html in their respective fields 
+      - In Permissions, click edit in the CORS section and enter the [FOLLOWING](assets/documentation/cors.png) configuration
+      - Click edit in buckect policy and generate the FOLLOWING policy
+      - The above generates a policy with [THIS](assets/documentation/bucketpolicy generator.png) setting. Please note that you will need to enter your own Amazon Resource Name(ARN)
+      - Click in Gerate Policy and copy the policy into the [Bucket Policy](assets/documentation/bucket policy.png)
+      - Before saving BE SURE to add to add the end of Resource /* as shown [HERE](assets/documentation/awsresource.png)
+      - In Access Control List set the List permissions to everyone under Public Access as shown [HERE](assets/documentation/aclall.png)
+      - Go to IAM. 
+      - On the sidebar click in User Groups
+      - Name your group
+      - Click on Create Policy
+      - Tag are optional but need to proceed to that stage before Review Policy
+      - Review Policy and accept
+      - On the sidebar click User Groups. Select your group, go to the permissions tab.
+      - Open the Add permissions dropdown, and click Attach policies. As shown [HERE](assets/documentation/awspolicies.png)
+      - Click in Policies and Create Policy
+      - Click in JSON and import the Amazon pre-built policy AmazonS3FullAccess
+      - Made tha changes shown [HERE](assets/documentation/awsjsonpolicy.png), including your own ARN 
+      - Click in Review Policy. 
+      - Set a name and description
+      - Click in Create Policy
+      - Return to the User Group you have previously created. 
+      - Click in Permissions and click in Attach Policy
+      - Search for name of the Policy we have just created and selct it. 
+      - Click Attach Policy
+      - Navigate to Users on the left side of the screen
+      - Add User and name it. 
+      - In Access Type, select Programatic Access
+      - Click Next
+      - Add the user the group we had created previously 
+      - Click Next, tags are optional
+      - Click Create User
+      - Download the CSV files with the keys that we will using in heroku. Keep them safe!
+      - In your project settings.py include the code [HERE](assets/documentation/awsusage.png) be sure to include a ENV variable called USE_AWS to trigger AWS usager otherwise it will defaul to local. 
+   - [Google Mail](gmail.com)
+      - Navigate to gmail.com
+      - Create an account
+      - Click in Manage you google account
+      - Click in Security 
+      - Enable 2 Step Verification  
+      - Click in App Passwords 
+      - Click in Select App and select Mail
+      - Click in Select Device and select Other
+      - Name the app and click in Generate
+      - Copy the 16 digits as this will the last time it is showed.
+      - In your project settings.py include the [FOLLOWING](assets/documentation/goolesettings.png) code
+      - The 16 digits password will be later use in heroku as well
+   - Heroku
+     - Navigate to Heroku
+     - Click in Settings
      - Click Reveal Config Vars
      - In Config Vars click in Add and add the following
-       - DATABASE_URL - 
+       - DATABASE_URL - In ElephantSQL navigate to your instance copy URL and paste it here. 
        - SECRET_KEY - Secret Key from Django
        - PORT - 8000
        - STRIPE_WH_SECRET - Stripe webhook secret key
@@ -245,11 +280,23 @@ ___
        - Click in the View button to open deployed app.
    * Local deployment
      - Clone the repository 
-     - Ensure your ENV variables are correct
-     - Run the command python3 manage.py migrate if required.
+     - Ensure your ENV variables are correctly setup 
+       - os.environ["SECRET_KEY"] = to be completed with your data
+       - os.environ["DATABASE_URL"] = to be completed with your data
+       - os.environ["STRIPE_PUBLIC_KEY"] = to be completed with your data
+       - os.environ["STRIPE_SECRET_KEY"] = to be completed with your data
+       - os.environ['STRIPE_WH_SECRET'] = to be completed with your data
+       - os.environ["AWS_ACCESS_KEY_ID"]= 'TO BE ADDED BY USER'
+       - os.environ["AWS_SECRET_ACCESS_KEY"]= 'TO BE ADDED BY USER'
+       - os.environ["EMAIL_HOST_USER"]= 'TO BE ADDED BY USER'
+       - os.environ["EMAIL_HOST_PASS"]= 'TO BE ADDED BY USER'
+       - os.environ["USE_AWS"]= 'TO BE ADDED BY USER'
+     - Run the command pip3 install -r requirements.txt
+     - Run the command python3 manage.py makemigrations --dry-run to review if any migration is required.
+     - Run the command python3 manage.py migrate to execute the migrations if required
+     - In settings.py modify ALLOWED_HOST to resolve any connectivity issues, add localhost. 
      - Run the command python3 manage.py runserver
-     - In settings.py modify ALLOWED_HOST to resolve any connectivity issues.
-    
+
 ## Credits
 ___
    * Official docummenation https://djangoproject.com
