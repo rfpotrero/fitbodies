@@ -1,3 +1,4 @@
+""" views for customer contact"""
 from django.shortcuts import render, redirect
 
 from .forms import ContactForm
@@ -5,7 +6,7 @@ from .forms import ContactForm
 
 def add_contact(request):
     """
-    View to process contacts 
+    View to process contacts
     """
 
     if request.method == 'POST':
@@ -32,4 +33,3 @@ def contact_success(request):
 
     template = 'contact/contact_success.html'
     return render(request, template)
-

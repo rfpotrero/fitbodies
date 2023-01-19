@@ -1,3 +1,4 @@
+""" Forms for Contact us form """
 from django import forms
 from .models import Contact
 
@@ -8,6 +9,7 @@ class ContactForm(forms.ModelForm):
     """
 
     class Meta:
+        """ Forms fields """
         model = Contact
         fields = ['name',
                   'email',
