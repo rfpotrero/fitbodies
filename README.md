@@ -34,44 +34,48 @@ For this project we have identified the following personas based on the expected
 
 ## Features
 ___
-   *  Ability to browser the site.
+   *  Ability to browser the site. [#2](https://github.com/rfpotrero/fitbodies/issues/2)
       * The landing page will be display as the first thing the visiting see. 
-   *  Ability Register in the site 
+   *  Ability Register in the site [#43](https://github.com/rfpotrero/fitbodies/issues/43)
       * The will register in the site using the links under My Account
       ![myaccount](assets/documentation/myaccount.png)
-   *  Ability to login to the site. 
+   *  Ability to login to the site. [#43](https://github.com/rfpotrero/fitbodies/issues/43)
       ![login](assets/documentation/login.png)
-   *  Ability Request a new password
+   *  Ability Request a new password [#43](https://github.com/rfpotrero/fitbodies/issues/43)
       ![passreset](assets/documentation/passreset.png)
-   *  Ability to shop by categories under the Store link
+   *  Ability to shop by categories under the Store link [#7](https://github.com/rfpotrero/fitbodies/issues/7)
       * Clicking in the Store nav-bar link will display the categories
       ![categories](assets/documentation/categories.png)
-   *  Ability to viw product details
+   *  Ability to viw product details [#7](https://github.com/rfpotrero/fitbodies/issues/7)
       ![productdetails](assets/documentation/productdetails.png)
-   *  Ability to add items the shopping bag
+   *  Ability to add items the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
       ![addtobag](assets/documentation/addtobag.png)
-   *  Ability to remove items from the shopping bag
+   *  Ability to remove items from the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
       ![removefrombag](assets/documentation/removefrombag.png)
-   *  Ability to see the items in the shopping bag
+   *  Ability to see the items in the shopping bag [#20](https://github.com/rfpotrero/fitbodies/issues/20)
       ![viewbag](assets/documentation/viewbag.png)
-   *  Ability to go to checkout to enter thei details
+   *  Ability to go to checkout to enter their details [#29](https://github.com/rfpotrero/fitbodies/issues/29)
       ![checkout](assets/documentation/checkout.png)
-   *  Ability to proceed to payments 
+   *  Ability to proceed to payments [#29](https://github.com/rfpotrero/fitbodies/issues/29)
       ![paymentsuccess](assets/documentation/paymentsuccess.png)
-   *  Ability to see and update their personal information 
+   *  Ability to see and update their personal information [#43](https://github.com/rfpotrero/fitbodies/issues/43)
       ![profile](assets/documentation/profile.png)
-   *  Ability to see old orders
+   *  Ability to see old orders [#43](https://github.com/rfpotrero/fitbodies/issues/43)
       ![profileorders](assets/documentation/profileorders.png)
-   *  Ability to track and update their progress 
+   *  Ability to track and update their progress [#59](https://github.com/rfpotrero/fitbodies/issues/59)
       ![progress](assets/documentation/progress.png)
-   *  Ability to track see their reviews
+   *  Ability to track see their reviews [#67](https://github.com/rfpotrero/fitbodies/issues/67)
       ![review](assets/documentation/review.png)
-   *  Ability to update their review 
+   *  Ability to update their review [#67](https://github.com/rfpotrero/fitbodies/issues/67)
       ![updatereview](assets/documentation/updatereview.png)
-   *  Ability to delete their review
+   *  Ability to delete their review [#67](https://github.com/rfpotrero/fitbodies/issues/67)
       ![updatereview](assets/documentation/updatereview.png)
-   *  Ability to Contact the business via form
+   *  Ability to Contact the business via form [#79](https://github.com/rfpotrero/fitbodies/issues/79)
       ![contactform](assets/documentation/contactform.png)
+   *  Ability to add new product to the site  [#59](https://github.com/rfpotrero/fitbodies/issues/59)
+   *  Ability to adjust existing product on the site [#13](https://github.com/rfpotrero/fitbodies/issues/13)
+   *  Ability to see the contact enquiries [#86](https://github.com/rfpotrero/fitbodies/issues/86)
+   *  Ability to adjust orders [#32](https://github.com/rfpotrero/fitbodies/issues/32)
 
 ## Future features
 ___
